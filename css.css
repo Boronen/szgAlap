@@ -23,11 +23,24 @@ article {
     padding: 5px;
 }
 .szamok {
-   
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;     
+    gap: 8px;
 }
+
 .szamok button {
-    
+    width: 60px;
+    height: 60px;
+    font-size: 20px;
 }
+
+.szamok .kozep{
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+}
+
 .muvjelek {
     grid-area: muv;
     margin: auto;
