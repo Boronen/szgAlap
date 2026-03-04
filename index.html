@@ -1,35 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Számológép</title>
-        <link rel="stylesheet" href="css.css" />
-        <script src="script.js"></script>
-       
-    </head>
-    <body>
-        <main>
-            <header>Számológép</header>
-            <article>
-                <section class="kijelzo">
-                    <span class="kifejezes"></span>
-                    <span class="eredmeny"></span>
-                </section>
-                <section class="szamok"></section>
-                <section class="muvjelek">
-                    <button id="osszeadas">+</button>
-                    <button id="kivonas">-</button>
-                    <button id="szorzas">*</button>
-                    <button id="osztas">/</button>
-                    <button id=".">.</button>
-                    <br />
-                    <button id="egyenlo">=</button>
-                    <button id="torles">C</button>
-                </section>
-            </article>
-            <footer>Saját név</footer>
-        </main>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Számológép</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <header id="mainheader">
+        <span>Színválasztás</span>
+      <select id="themeSelector">
+        <option value="default">Alapértelmezett</option>
+        <option value="blue">Kék / Fehér</option>
+        <option value="dark">Sötét / Szürke</option>
+        <option value="sunset">Narancs / Barna</option>
+        <option value="gamervibes">Fekete / Fehér</option>
+      </select>
+    </header>
+    <main>
+      <div id="core">
+        <header>Számológép</header>
+        <article>
+          <section class="kijelzo">
+            <span class="kifejezes"></span>
+            <span class="eredmeny"></span>
+          </section>
+          <section class="szamok"></section>
+          <section class="muvjelek">
+            <button id="osszeadas">+</button>
+            <button id="kivonas">-</button>
+            <button id="szorzas">*</button>
+            <button id="osztas">/</button>
+            <button id=".">.</button>
+            <br />
+            <button id="egyenlo">=</button>
+            <button id="torles">C</button>
+          </section>
+        </article>
+        <footer>Kovács Kevin &copy;</footer>
+      </div>
+    </main>
+    <div id="errorInfo">
+      <span>* Error code:1 - Érvénytelen karakter a kifejezésben </span><br />
+      <span>* Error code:2 - Két műveleti jel egymás után </span><br />
+      <span>* Error code:3 - A kifejezés műveleti jellel nem végződhet</span>
+    </div>
+  </body>
 </html>

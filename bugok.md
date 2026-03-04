@@ -1,1 +1,0 @@
-1 Továbbszámolásnál hozzáírja az eredményt, patika meg minden, de design szinten undormány
