@@ -1,2 +1,4 @@
 - Telefonon csak vertical strechbe van normalisan megcsinalva a mediaquery
 - nem lehet kezdeni minusz ertekkel, igazabol a kod igy van megirva de ez inkabb design para
+- egyenlőséghez van addolva , lehet abuseolni a leaderboardot
+- a leaderboard overflowol [még nem tudom hol]
