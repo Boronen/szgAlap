@@ -1,69 +1,161 @@
-main {
-    width: 300px;
-    text-align: center;
-    margin: auto;
-}
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 }
-#mainheader{
-    padding: 10px;
+
+
+body {
+    background: #f5f5f5;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
+    padding: 20px 10px 60px;
+}
+
+
+#mainheader {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 8px;
     border-radius: 20px;
-    margin-bottom: 20px;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
 }
-select {
-    border-radius: 10px; 
+
+#mainheader span {
+    color: #000;
+    font-size: 14px;
+}
+
+#mainheader select {
+    border-radius: 10px;
+    padding: 4px 8px;
+    font-size: 12px;
+}
+
+
+#loginPanel {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #ffffff;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 170px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+#loginPanel h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+#loginPanel input {
+    width: 100%;
+    margin-bottom: 6px;
+    padding: 4px 6px;
+    font-size: 12px;
+}
+
+#loginPanel button {
+    width: 100%;
+    margin-bottom: 4px;
+    padding: 4px 6px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+#loginMessage {
+    font-size: 11px;
+    margin-top: 4px;
+}
+
+
+#leaderboard {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background: #ffffff;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+    width: 200px;
+    max-height: 40vh;
+    overflow-y: auto;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    z-index: 10;
+}
+
+#leaderboard h4 {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+#leaderboard ul {
+    list-style: none;
+    font-size: 12px;
+}
+
+
+main {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
     text-align: center;
-    font-size: 10px;
-}
-span{
-    color: rgb(0, 0, 0);
-    margin-right: 5px; 
 }
 
-
-#core{
-    padding-left: 10px;
-    padding-right: 10px;
+#core {
+    padding: 10px;
     border: 3px solid black;
     border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+#core > header {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+
 article {
     display: grid;
     grid-template-areas:
         "kij kij"
         "szam muv";
-    grid-template-columns: 2fr fr;
-    grid-gap: 5px;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 8px;
 }
-#errorInfo {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    font-size: 12px;
-    background: rgba(255,255,255,0.8);
-    padding: 8px;
-    border: 1px solid black;
-    border-radius: 6px;
-    max-width: 200px;
-}
+
 
 .kijelzo {
     grid-area: kij;
     border: 1px solid gray;
     border-radius: 8px;
-    height: 30px;
+    height: 40px;
     text-align: left;
     font-weight: bold;
-    padding: 5px;
+    padding: 5px 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 13px;
 }
+
 .szamok {
     display: flex;
     flex-wrap: wrap;
-    width: 200px;     
+    justify-content: center;
     gap: 8px;
 }
 
@@ -71,23 +163,95 @@ article {
     width: 60px;
     height: 60px;
     font-size: 20px;
+    cursor: pointer;
 }
 
-.szamok .kozep{
+.szamok .kozep {
     margin-left: auto;
     margin-right: auto;
-    padding: 0px;
+    padding: 0;
     margin-bottom: 20px;
 }
+
 
 .muvjelek {
     grid-area: muv;
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 8px;
 }
+
 .muvjelek button {
-  
-    width: 30px;
+    width: 35px;
+    height: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+#errorInfo {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    font-size: 11px;
+    background: rgba(255,255,255,0.9);
+    padding: 8px;
+    border: 1px solid black;
+    border-radius: 6px;
+    max-width: 220px;
+    z-index: 9;
+}
+
+
+#core footer {
+    margin-top: 8px;
+    font-size: 11px;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px 5px 70px;
+    }
+
+    #mainheader {
+        max-width: 100%;
+    }
+
+    main {
+        max-width: 100%;
+    }
+
+    article {
+        grid-template-areas:
+            "kij"
+            "szam"
+            "muv";
+        grid-template-columns: 1fr;
+    }
+
+    #loginPanel {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    #leaderboard {
+        position: static;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 10px;
+    }
+
+    #errorInfo {
+        position: static;
+        margin-top: 10px;
+    }
+
+    .szamok button {
+        width: 28%;
+        max-width: 80px;
+    }
 }

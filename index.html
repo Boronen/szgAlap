@@ -1,16 +1,16 @@
 <!doctype html>
-<html lang="en">
+<html lang="hu">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Számológép</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
   </head>
   <body>
     <header id="mainheader">
-        <span>Színválasztás</span>
+      <span>Színválasztás</span>
       <select id="themeSelector">
         <option value="default">Alapértelmezett</option>
         <option value="blue">Kék / Fehér</option>
@@ -19,6 +19,16 @@
         <option value="gamervibes">Fekete / Fehér</option>
       </select>
     </header>
+
+    <div id="loginPanel">
+      <h3>Bejelentkezés</h3>
+      <input type="text" id="username" placeholder="Felhasználónév" />
+      <input type="password" id="password" placeholder="Jelszó" />
+      <button id="loginBtn">Belépés</button>
+      <button id="registerBtn">Regisztráció</button>
+      <div id="loginMessage"></div>
+    </div>
+
     <main>
       <div id="core">
         <header>Számológép</header>
@@ -42,10 +52,16 @@
         <footer>Kovács Kevin &copy;</footer>
       </div>
     </main>
+
     <div id="errorInfo">
       <span>* Error code:1 - Érvénytelen karakter a kifejezésben </span><br />
       <span>* Error code:2 - Két műveleti jel egymás után </span><br />
       <span>* Error code:3 - A kifejezés műveleti jellel nem végződhet</span>
+    </div>
+
+    <div id="leaderboard">
+      <h4>Leaderboard</h4>
+      <ul id="leaderboardList"></ul>
     </div>
   </body>
 </html>
